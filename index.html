@@ -558,6 +558,60 @@
     <div class="slides">
 
 
+<section class="slide level1">
+
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="statistical-analysis-anova-results">Statistical Analysis: ANOVA
+Results</h3>
+<p>Using ANOVA, we assessed the impact of Pressure (P) and Temperature
+(T) on Part Resistance for Machine 1. A significance level (<span
+class="math inline">\(lpha\)</span>) of 0.05 was used.</p>
+<p><strong>Key Findings:</strong></p>
+<ul>
+<li><strong>Pressure (P):</strong>
+<ul>
+<li>Pr(&gt;F): 0.0000</li>
+<li>Conclusion: Significant</li>
+</ul></li>
+<li><strong>Temperature (T):</strong>
+<ul>
+<li>Pr(&gt;F): 0.0005</li>
+<li>Conclusion: Significant</li>
+</ul></li>
+<li>**Interaction (P*T):**
+<ul>
+<li>Pr(&gt;F): 0.5558</li>
+<li>Conclusion: Not Significant</li>
+</ul></li>
+</ul>
+<p><strong>ANOVA Summary Table:</strong></p>
+<pre><code>Df Sum Sq Mean Sq  F value   Pr(&gt;F)     
+Pressure_f                  2  507.8  253.91 3066.480  &lt; 2e-16 *** 
+Temperature_f               2    1.3    0.63    7.611 0.000511 *** 
+Pressure_f:Temperature_f    4    0.2    0.06    0.753 0.555837     
+Residuals                1791  148.3    0.08                       
+--- 
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1</code></pre>
+<aside class="notes">
+<ul>
+<li>Both pressure and temperature individually have a statistically
+significant effect on the part resistance.</li>
+<li>The interaction between pressure and temperature is not
+statistically significant, meaning their combined effect isn’t more or
+less than their individual effects combined.</li>
+<li>The very low p-value for pressure (&lt; 2e-16) suggests a strong
+influence.</li>
+</ul>
+</aside>
+</div><div class="column" style="width:50%;">
+<h3 id="part-resistance-by-temperature-and-pressure">Part Resistance by
+Temperature and Pressure</h3>
+<iframe data-src="media/plots/boxplot_resistance_machine1.html" width="100%" height="500px" style="border:none;" scrolling="no">
+</iframe>
+</div>
+</div>
+</section>
 <section id="bibliography" class="slide level1">
 <h1>Bibliography</h1>
 <div id="refs" role="list">

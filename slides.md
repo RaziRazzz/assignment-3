@@ -20,17 +20,6 @@ Using ANOVA, we assessed the impact of Pressure (P) and Temperature (T) on Part 
   - Pr(>F): 0.5558
   - Conclusion: Not Significant
 
-**ANOVA Summary Table:**
-```
-Df Sum Sq Mean Sq  F value   Pr(>F)     
-Pressure_f                  2  507.8  253.91 3066.480  < 2e-16 *** 
-Temperature_f               2    1.3    0.63    7.611 0.000511 *** 
-Pressure_f:Temperature_f    4    0.2    0.06    0.753 0.555837     
-Residuals                1791  148.3    0.08                       
---- 
-Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
-```
-
 ::: {.notes}
 - Both pressure and temperature individually have a statistically significant effect on the part resistance.
 - The interaction between pressure and temperature is not statistically significant, meaning their combined effect isn't more or less than their individual effects combined.
@@ -53,3 +42,17 @@ Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’
 
 :::
 ::::
+
+---
+
+### ANOVA Summary Table: Part Resistance for Machine 1
+
+```
+Df Sum Sq Mean Sq  F value   Pr(>F)     
+Pressure_f                  2  507.8  253.91 3066.480  < 2e-16 *** 
+Temperature_f               2    1.3    0.63    7.611 0.000511 *** 
+Pressure_f:Temperature_f    4    0.2    0.06    0.753 0.555837     
+Residuals                1791  148.3    0.08                       
+--- 
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+```

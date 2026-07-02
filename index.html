@@ -562,78 +562,6 @@
 
 <div class="columns">
 <div class="column" style="width:50%;">
-<h2 id="sample-slides">Sample slides</h2>
-<h4 id="placeholdername">PlaceHolderName</h4>
-<h4 id="universiti-malaysia-perlis">Universiti Malaysia Perlis</h4>
-<h4 id="placeholderemail.com"><a
-href="mailto:placeholder@email.com">placeholder@email.com</a></h4>
-<audio id="bg-music" src="media/audio/sb.m4a" loop>
-</audio>
-<div id="audio-credit"
-style="position: absolute; bottom: 40px; right: 20px; font-size: 0.6em; opacity: 0.6;">
-<p>Music: “Adrift” by Scott Buckley (CC BY 4.0)</p>
-</div>
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const audio = document.getElementById('bg-music');
-    const credit = document.getElementById('audio-credit');
-
-    // hide credit by default
-    credit.style.display = 'none';
-
-    const test = new Audio('media/audio/bgm.mp3');
-
-    test.addEventListener('canplaythrough', () => {
-      // bgm.mp3 exists → use it, keep credit hidden
-      audio.src = 'media/audio/bgm.mp3';
-    }, { once: true });
-
-    test.addEventListener('error', () => {
-      // bgm.mp3 missing → sb.m4a will play → show credit
-      credit.style.display = 'block';
-    }, { once: true });
-
-    document.addEventListener('click', () => {
-      if (Reveal.getIndices().h === 0) {
-        audio.volume = 0.5;
-        audio.play();
-      }
-    }, { once: true });
-
-    Reveal.on('slidechanged', (event) => {
-      if (event.indexh > 0) { audio.pause(); }
-      else { audio.play(); }
-    });
-  });
-</script>
-</div><div class="column" style="width:50%;">
-<p><img data-src="media/pics/logo1.png" /></p>
-</div>
-</div>
-</section>
-<section class="slide level1">
-
-<div class="columns">
-<div class="column" style="width:50%;">
-<h3 id="slide-one">Slide one</h3>
-<p><strong>Key Concepts:</strong> - Energy conservation per <span
-class="citation" data-cites="carnot1824">(1)</span>. - <span
-class="math inline">\(\Delta U = Q - W\)</span></p>
-</div><div class="column" style="width:50%;">
-<p><img data-src="media/pics/sample.png" /></p>
-</div>
-</div>
-</section>
-<section class="slide level1">
-
-<p><span class="slide-title"
-data-title="My Hidden Slide Name"></span></p>
-<p><img data-src="media/pics/wide.jpeg" /></p>
-</section>
-<section class="slide level1">
-
-<div class="columns">
-<div class="column" style="width:50%;">
 <h3 id="the-master-equation">The Master Equation</h3>
 <p>The fundamental relation of thermodynamics:</p>
 <p><span class="math display">\[\Delta U = Q - W\]</span></p>
@@ -718,12 +646,8 @@ Temperature and Pressure</h3>
 </section>
 <section id="bibliography" class="slide level1">
 <h1>Bibliography</h1>
-<div id="refs" class="references csl-bib-body" role="list">
-<div id="ref-carnot1824" class="csl-entry" role="listitem">
-<div class="csl-left-margin">1. </div><div class="csl-right-inline">Sadi
-Carnot. Reflections on the motive power of fire. Annals of Physics.
-1824;1:1–100.</div>
-</div>
+<div id="refs" role="list">
+
 </div>
 </section>
     </div>
@@ -801,7 +725,7 @@ Carnot. Reflections on the motive power of fire. Annals of Physics.
         rtl: false,
 
         // see https://revealjs.com/vertical-slides/#navigation-mode
-        navigationMode: 'linear',
+        navigationMode: 'default',
 
         // Randomizes the order of slides each time the presentation loads
         shuffle: false,
